@@ -1,0 +1,87 @@
+.Toolbar {
+
+
+  &.MuiToolbar-root {
+    height: 6vh;
+    width: 80%;
+
+
+  }
+
+  &-Wrapper {
+    &.MuiAppBar-root {
+
+      align-items: center;
+    }
+  }
+
+  &-Icon {
+    &.MuiIconButton-root {
+      display: none;
+    }
+
+  }
+
+  &-Title {
+    &.MuiTypography-root {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &-Item {
+    border-radius: 10px;
+    transition: opacity ease .2s, background-color ease .2s;
+
+    &.MuiTypography-root {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+
+  }
+
+  &-Item:hover {
+    cursor: pointer;
+    opacity: 0.6;
+    background-color: #1565c0;
+  }
+
+
+}
+
+@media (max-width: 600px) {
+  .Toolbar {
+
+
+    &-Icon {
+      &.MuiIconButton-root {
+        margin-left: 10px;
+        display: inline-flex;
+      }
+
+    }
+
+    &-Item {
+      &.MuiTypography-root {
+        display: none;
+      }
+    }
+
+
+  }
+}
+
+@media (max-width: 768px) {
+  .Toolbar {
+
+    &.MuiToolbar-root {
+      width: 100%;
+    }
+
+  }
+}

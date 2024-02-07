@@ -1,0 +1,32 @@
+$default-font: 'Roboto', serif;
+$font-weights: (
+        'regular': 400,
+        'medium': 500,
+        'bold': 700
+);
+$font-size: (
+        'sm': 12px,
+        'md': 14px,
+        'lg': 18px
+);
+$colors: (
+        'primary': #2680D9,
+        'secondary': #E7ECF1,
+        'default': #FFF
+);
+
+$text-color: (
+        'primary': #000,
+        'secondary': #114475,
+        'secondary-light': rgba(17, 68, 117, 0.70),
+        'tertiary': #2580DB,
+        'placeholder': #6D84A0,
+        'default': #FFF
+);
+
+
+$drawer-width: 247px;
+$drawer-width-laptop: 200px;
+$sidebar-border-radius: 4px;
+$sidebar-icon-button-width: 83%;
+
