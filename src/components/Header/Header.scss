@@ -1,16 +1,26 @@
 .Toolbar {
 
-
   &.MuiToolbar-root {
     height: 6vh;
     width: 80%;
 
+  }
+
+  &-Info {
+    margin-top: 20px;
+    width: 70%;
+    justify-content: start;
+    position: relative;
+
+    &.MuiStack-root {
+      flex-direction: row;
+    }
 
   }
 
   &-Wrapper {
     &.MuiAppBar-root {
-
+      position: relative;
       align-items: center;
     }
   }
@@ -54,6 +64,16 @@
 
 }
 
+@media (max-width: 768px) {
+  .Toolbar {
+
+    &.MuiToolbar-root {
+      width: 100%;
+    }
+
+  }
+}
+
 @media (max-width: 600px) {
   .Toolbar {
 
@@ -76,11 +96,13 @@
   }
 }
 
-@media (max-width: 768px) {
-  .Toolbar {
 
-    &.MuiToolbar-root {
-      width: 100%;
+@media (max-width: 475px) {
+  .Toolbar {
+    &-Info {
+      &.MuiStack-root {
+        display: none;
+      }
     }
 
   }

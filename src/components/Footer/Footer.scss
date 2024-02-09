@@ -1,0 +1,16 @@
+.Footer {
+  width: 100%;
+  background-color: #2580DB;
+  color: #FFFFFF;
+
+
+  &.MuiToolbar-root{
+    padding-left: 50px;
+  }
+  &-Wrapper {
+    width: 100%;
+    &.MuiBottomNavigation-root {
+      min-height: 15vh;
+    }
+  }
+}

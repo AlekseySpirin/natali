@@ -4,18 +4,37 @@ import MenuIcon from '@mui/icons-material/Menu';
 import {cn} from "@bem-react/classname";
 import './Header.scss';
 import Logo from '../Logo/Logo';
+import {
+	CONTACTS_ROUTE,
+	GALLERY_ROUTE,
+	MAIN_ROUTE,
+	PRICE_ROUTE
+} from "../../utils/constants";
+import { useNavigate} from "react-router-dom";
 
 const Header = () => {
+	const navigate = useNavigate();
+	const handleMainRouteClick = () => {
+		navigate(MAIN_ROUTE);
+	};
+	
+	const handlePriceRouteClick = () => {
+		navigate(PRICE_ROUTE);
+	};
+	
+	const handleGalleryRouteClick = () => {
+		navigate(GALLERY_ROUTE);
+	};
+	
+	const handleContactsRouteClick = () => {
+		navigate(CONTACTS_ROUTE);
+	};
 	
 	const toolbar = cn('Toolbar');
 	
 	return (
 		<AppBar className={toolbar('Wrapper')}>
-			<Stack flexDirection={'row'}
-			       marginTop={'20px'}
-			       width={'70%'}
-			       justifyContent={'start'}
-			>
+			<Stack className={toolbar('Info')}>
 				<Logo/>
 				<Typography className={toolbar('Title')}
 				            marginLeft={'20px'}
@@ -50,14 +69,18 @@ const Header = () => {
 				            edge="start"
 				            color="inherit"
 				            aria-label="menu"
-				            sx={{mr: 2}}>
-					<MenuIcon/>
+				            sx={{mr: 2}}
+				            
+				>
+					
+					<MenuIcon />
 				</IconButton>
 				<Typography className={toolbar('Item')}
 				            variant="h6"
 				            component="div"
 				            textAlign={'center'}
 				            sx={{flexGrow: 1}}
+				            onClick={handleMainRouteClick}
 				>
 					Главная
 				</Typography>
@@ -66,6 +89,8 @@ const Header = () => {
 				            component="div"
 				            sx={{flexGrow: 1}}
 				            textAlign={'center'}
+				            onClick={handlePriceRouteClick}
+				          
 				>
 					Проживание и цены
 				</Typography>
@@ -75,6 +100,7 @@ const Header = () => {
 				            sx={{flexGrow: 1}}
 				            align={"center"}
 				            textAlign={'center'}
+				            onClick={handleGalleryRouteClick}
 				>
 					Галерея
 				</Typography>
@@ -83,6 +109,7 @@ const Header = () => {
 				            component="div"
 				            sx={{flexGrow: 1}}
 				            textAlign={'center'}
+				            onClick={handleContactsRouteClick}
 				>
 					Контакты
 				</Typography>
