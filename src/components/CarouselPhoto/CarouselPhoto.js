@@ -2,15 +2,16 @@ import React from 'react';
 import Carousel from 'react-material-ui-carousel';
 import CarouselPhotoItem from "../CarouselPhotoItem/CarouselPhotoItem";
 import mainSlider from "../../data/dataImg/mainSlider.json";
+import {cn} from "@bem-react/classname";
+import './CarouselPhoto.scss';
 
 const CarouselPhoto = () => {
 	
+	const carouselCN = cn('Carousel');
+	
 	return (
-		<Carousel sx={{
-			transform: 'translateY(200px)',
-			margin: '0 100px',
-			borderRadius: '10px'
-		}}>
+		<Carousel className={carouselCN()}
+		>
 			{
 				mainSlider.map(item => <CarouselPhotoItem key={item.id} item={item}/>)
 			}
