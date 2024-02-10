@@ -1,0 +1,15 @@
+.Card {
+  &.MuiCard-root {
+    width: 100%;
+    background-color: #FFE7C9;
+
+  }
+  &-Description {
+    &.MuiTypography-root {
+      text-align: justify;
+      text-indent: 20px;
+    }
+  }
+}
+
+
