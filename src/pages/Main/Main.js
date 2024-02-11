@@ -3,12 +3,13 @@ import {cn} from "@bem-react/classname";
 import './Main.scss';
 import CarouselPhoto from "../../components/CarouselPhoto/CarouselPhoto";
 import {Typography} from "@mui/material";
+import mainSlider from "../../data/dataImg/mainSlider.json";
 
 const Main = () => {
 	const mainCN = cn('Main');
 	return (
 		<main className={mainCN()}>
-			<CarouselPhoto/>
+			<CarouselPhoto autoPlay={true} items={mainSlider} />
 			<Typography className={mainCN('Title')}
 			            variant="h5"
 			            component="h2"

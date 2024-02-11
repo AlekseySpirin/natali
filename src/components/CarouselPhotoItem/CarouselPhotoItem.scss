@@ -5,13 +5,15 @@
 
   &-Image {
     aspect-ratio: 16 / 9;
+    margin: 0;
+    padding: 0;
     width: 100%;
   }
 
-  &-Title {
-    font-size: clamp(20px, 1rem, 40px);
-    text-align: center;
-    margin: 0;
-    padding-bottom: 10px;
-  }
+  //&-Title {
+  //  font-size: clamp(20px, 1rem, 40px);
+  //  text-align: center;
+  //  margin: 0;
+  //  padding-bottom: 10px;
+  //}
 }

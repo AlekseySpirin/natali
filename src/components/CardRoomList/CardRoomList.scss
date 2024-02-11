@@ -1,19 +1,17 @@
 .CardList {
-  //display: flex;
-  //flex-direction: row;
-  //flex-wrap: wrap;
-  //justify-content: space-evenly;
-  //display: grid;
   grid-gap: 40px;
-  //grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  ////grid-auto-flow: dense;
-  //padding: 0;
-  //margin: 0 40px;
   list-style: none;
 
   &-Title {
     margin: 10px;
     text-align: center;
     font-size: 40px;
+  }
+
+  &-Divider {
+    &.MuiDivider-root {
+      margin-bottom: 20px;
+      border-color: rgba(0, 0, 0, 0.3);
+    }
   }
 }
