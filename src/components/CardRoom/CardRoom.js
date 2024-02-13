@@ -49,8 +49,8 @@ const CardRoom = ({item}) => {
 	};
 	
 	return (
-		<Grid item xs={12} sm={10} md={5}>
-			<Card className={cardCN()} component={'li'}>
+		<Grid item xs={12} sm={10} md={5} component={'li'}>
+			<Card className={cardCN()} >
 				<CardHeader
 					title={title}
 					subheader={subtitle}

@@ -15,7 +15,7 @@ const {titleList, list} = item
 			</h3>
 			<Divider className={cardRoomListCN('Divider')}
 				variant={'middle'} />
-			<Grid container justifyContent={'center'} className={cardRoomListCN()}>
+			<Grid container justifyContent={'center'} className={cardRoomListCN()} component={'ul'}>
 				{list.map(item =>
 					<CardRoom key={item.id} item={item}/>
 				)}
