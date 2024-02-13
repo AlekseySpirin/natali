@@ -1,0 +1,16 @@
+.PhotoAlbumList {
+
+  &-Item {
+    &.MuiCard-root {
+      width: 100%;
+      background-color: rgba(255, 231, 201, 0.46);
+    }
+  }
+
+  &-Image {
+    &.MuiCardMedia-root {
+      aspect-ratio: 16 / 9;
+    }
+  }
+}
+

@@ -1,0 +1,66 @@
+[
+  {
+    "title": "Парк",
+    "id": 5,
+    "imageList": [
+      {
+        "id": 1,
+        "image": "image/photoGallery/park/park.jpg",
+        "title": "--Парк--"
+      },
+      {
+        "id": 2,
+        "image": "image/photoGallery/park/park1.jpg",
+        "title": "--Парк--"
+      },
+      {
+        "id": 3,
+        "image": "image/photoGallery/park/park2.jpg",
+        "title": "--Парк--"
+      },
+      {
+        "id": 4,
+        "image": "image/photoGallery/park/park3.jpg",
+        "title": "--Парк--"
+      },
+      {
+        "id": 5,
+        "image": "image/photoGallery/park/park4.jpg",
+        "title": "--Парк--"
+      },
+      {
+        "id": 6,
+        "image": "image/photoGallery/park/park5.jpg",
+        "title": "--Парк--"
+      },
+      {
+        "id": 7,
+        "image": "image/photoGallery/park/park6.jpg",
+        "title": "--Парк--"
+      },
+      {
+        "id": 8,
+        "image": "image/photoGallery/park/park7.jpg",
+        "title": "--Парк--"
+      },
+      {
+        "id": 9,
+        "image": "image/photoGallery/park/park8.jpg",
+        "title": "--Парк--"
+      },
+      {
+        "id": 10,
+        "image": "image/photoGallery/park/park9.jpg",
+        "title": "--Парк--"
+      }
+    ]
+
+  }
+]
+
+
+
+
+
+
+

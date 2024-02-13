@@ -60,7 +60,7 @@ const Header = () => {
 				            component="div"
 				            sx={{flexGrow: 1}}
 				>
-					+7 (978) 719-10-70
+					+7(978) 732-26-67
 				</Typography>
 			</Stack>
 			<Toolbar className={toolbar()} variant="dense">

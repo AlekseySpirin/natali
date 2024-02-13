@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Рыбзик",
+    "id": 6,
+    "imageList": [
+      {
+        "id": 1,
+        "image": "image/photoGallery/ribzik/ribzik.jpg",
+        "title": "--Рыбзик--"
+      },
+      {
+        "id": 2,
+        "image": "image/photoGallery/ribzik/ribzik1.jpg",
+        "title": "--Рыбзик--"
+      },
+      {
+        "id": 3,
+        "image": "image/photoGallery/ribzik/ribzik2.jpg",
+        "title": "--Рыбзик--"
+      },
+      {
+        "id": 4,
+        "image": "image/photoGallery/ribzik/ribzik3.jpg",
+        "title": "--Рыбзик--"
+      },
+      {
+        "id": 5,
+        "image": "image/photoGallery/ribzik/ribzik4.jpg",
+        "title": "--Рыбзик--"
+      }
+    ]
+
+  }
+]
+
+
+
+
+
+
+
+
+
+

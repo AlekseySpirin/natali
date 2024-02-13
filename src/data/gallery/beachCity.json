@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Центральный пляж",
+    "id": 2,
+    "imageList": [
+      {
+        "id": 1,
+        "image": "image/photoGallery/city/city.jpg",
+        "title": "--Центральный пляж--"
+      },
+      {
+        "id": 2,
+        "image": "image/photoGallery/city/city1.jpg",
+        "title": "--Центральный пляж--"
+      },
+      {
+        "id": 3,
+        "image": "image/photoGallery/city/city2.jpg",
+        "title": "--Центральный пляж--"
+      },
+      {
+        "id": 4,
+        "image": "image/photoGallery/city/city3.jpg",
+        "title": "--Центральный пляж--"
+      },
+      {
+        "id": 5,
+        "image": "image/photoGallery/city/city4.jpg",
+        "title": "--Центральный пляж--"
+      },
+      {
+        "id": 6,
+        "image": "image/photoGallery/city/city5.jpg",
+        "title": "--Центральный пляж--"
+      },
+      {
+        "id": 7,
+        "image": "image/photoGallery/city/city6.jpg",
+        "title": "--Центральный пляж--"
+      },
+      {
+        "id": 8,
+        "image": "image/photoGallery/city/city7.jpg",
+        "title": "--Центральный пляж--"
+      }
+    ]
+  }
+]
+
+

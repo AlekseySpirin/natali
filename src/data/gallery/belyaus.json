@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Беляус",
+    "id": 3,
+    "imageList": [
+      {
+        "id": 1,
+        "image": "image/photoGallery/belyaus/belyaus.jpg",
+        "title": "--Беляус--"
+      },
+      {
+        "id": 2,
+        "image": "image/photoGallery/belyaus/belyaus1.jpg",
+        "title": "--Беляус--"
+      },
+      {
+        "id": 3,
+        "image": "image/photoGallery/belyaus/belyaus2.jpg",
+        "title": "--Беляус--"
+      },
+      {
+        "id": 4,
+        "image": "image/photoGallery/belyaus/belyaus3.jpg",
+        "title": "--Беляус--"
+      },
+      {
+        "id": 5,
+        "image": "image/photoGallery/belyaus/belyaus4.jpg",
+        "title": "--Беляус--"
+      },
+      {
+        "id": 6,
+        "image": "image/photoGallery/belyaus/belyaus5.jpg",
+        "title": "--Беляус--"
+      },
+      {
+        "id": 7,
+        "image": "image/photoGallery/belyaus/belyaus6.jpg",
+        "title": "--Беляус--"
+      },
+      {
+        "id": 8,
+        "image": "image/photoGallery/belyaus/belyaus7.jpg",
+        "title": "--Беляус--"
+      }
+    ]
+
+  }
+]
+

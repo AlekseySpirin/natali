@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Скалы",
+    "id": 7,
+    "imageList": [
+      {
+        "id": 1,
+        "image": "image/photoGallery/rocks/rocks.jpg",
+        "title": "--Скалы--"
+      },
+      {
+        "id": 2,
+        "image": "image/photoGallery/rocks/rocks1.jpg",
+        "title": "--Скалы--"
+      },
+      {
+        "id": 3,
+        "image": "image/photoGallery/rocks/rocks2.jpg",
+        "title": "--Скалы--"
+      },
+      {
+        "id": 4,
+        "image": "image/photoGallery/rocks/rocks3.jpg",
+        "title": "--Скалы--"
+      },
+      {
+        "id": 5,
+        "image": "image/photoGallery/rocks/rocks4.jpg",
+        "title": "--Скалы--"
+      },
+      {
+        "id": 6,
+        "image": "image/photoGallery/rocks/rocks5.jpg",
+        "title": "--Скалы--"
+      },
+      {
+        "id": 7,
+        "image": "image/photoGallery/rocks/rocks6.jpg",
+        "title": "--Скалы--"
+      }
+    ]
+  }
+]
+
+
+
+
+
+
+
+
+
