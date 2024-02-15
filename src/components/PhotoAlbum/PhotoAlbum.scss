@@ -1,0 +1,107 @@
+.PhotoAlbum {
+
+  &-Wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+
+  &-List {
+    grid-gap: 40px;
+    list-style: none;
+    margin: 40px 0;
+    padding: 0;
+  }
+
+  &-Item {
+    &.MuiCard-root {
+      width: 100%;
+      background-color: rgba(255, 231, 201, 0.46);
+    }
+  }
+  &-Title {
+    margin: 10px;
+    text-align: center;
+    font-size: 40px;
+  }
+  &-Divider {
+    &.MuiDivider-root {
+      margin-bottom: 20px;
+      border-color: rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  &-Image {
+    transition: opacity .3s;
+    &:hover {
+      cursor: pointer;
+      opacity: .7;
+    }
+    &.MuiCardMedia-root {
+      aspect-ratio: 16 / 9;
+
+    }
+  }
+
+  &-Link {
+    text-decoration: none;
+    transition: opacity .3s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+}
+
+.ModalPhoto {
+  position: relative;
+  //& .MuiPaper-root {
+  //  background-color: transparent;
+  //  color: #FFFFFF;
+  //  box-shadow: none;
+  //}
+  //& .MuiBackdrop-root {
+  //  background-color: rgba(0, 0, 0, 0.9);
+  //}
+
+  &-Carousel {
+    position: relative;
+  }
+
+  &-Image {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+
+  }
+
+  &-Title {
+    margin: 10px;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &-CloseBtn {
+    font-size: 4rem;
+
+    &.MuiButton-root {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: #000000;
+      font-weight: 700;
+      font-size: 2rem;
+      z-index: 1000;
+
+    }
+  }
+
+
+}

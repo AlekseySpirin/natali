@@ -1,22 +1,22 @@
 import React from 'react';
 import {cn} from "@bem-react/classname";
 import './Gallery.scss';
-import PhotoAlbumList from '../../components/PhotoAlbumList/PhotoAlbumList'
+import PhotoAlbumList from '../../components/PhotoAlbumList/PhotoAlbumList';
 import {Grid} from "@mui/material";
-import {albums} from "../../utils/constants";
+import {useAlbumContext} from "../../context/AlbumContext";
+
 
 const galleryCN = cn('Gallery');
-const photoAlbumList = cn('PhotoAlbumList')
+const photoAlbumList = cn('PhotoAlbumList');
 const Gallery = () => {
-	
-	console.log(albums);
+	const albums = useAlbumContext();
 	
 	return (
 		<main className={galleryCN()}>
 			<Grid className={photoAlbumList()} container justifyContent={'center'}
 			      component={'ul'}>
 				{albums.map(item =>
-						<PhotoAlbumList key={item.id} item={item}/>
+					<PhotoAlbumList key={item.id} item={item}/>
 				)}
 			</Grid>
 		</main>

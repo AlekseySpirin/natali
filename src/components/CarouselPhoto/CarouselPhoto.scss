@@ -5,7 +5,8 @@
     aspect-ratio: 16 / 9;
     width: 100%;
     object-fit: cover;
-    cursor: pointer;
+    transition: opacity .3s;
+  cursor: pointer;
   }
 
 

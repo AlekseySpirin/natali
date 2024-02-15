@@ -3,25 +3,23 @@ import {cn} from "@bem-react/classname";
 import './Main.scss';
 import CarouselPhoto from "../../components/CarouselPhoto/CarouselPhoto";
 import {Typography} from "@mui/material";
-import mainSlider from "../../data/dataImg/mainSlider.json";
+import mainSlider from "../../data/courtyard/courtyard.json";
 
 const Main = () => {
 	const mainCN = cn('Main');
 	return (
 		<main className={mainCN()}>
-			<CarouselPhoto autoPlay={true} items={mainSlider} />
+			<CarouselPhoto autoPlay={true} items={mainSlider}/>
 			<Typography className={mainCN('Title')}
 			            variant="h5"
 			            component="h2"
 			>
 				Добро пожаловать в гостевой дом "У Наталии",
-				где каждый момент превращается в незабываемое приключение отдыха.
+				где каждый момент превращается в незабываемый отдых.
 			</Typography>
 			<Typography className={mainCN('Description')}
 			            variant="body1"
 			            component="p"
-			            
-			            
 			>
 				Расположенный в Черноморском районе Республики Крым, в живописном
 				поселке Черноморское, на Тарханкутском полуострове, наш уютный дом
@@ -33,10 +31,8 @@ const Main = () => {
 				Инфраструктура:
 			</Typography>
 			<Typography className={mainCN('Description')}
-				variant="body1"
-				component="p"
-				
-				
+			            variant="body1"
+			            component="p"
 			>
 				На территории гостевого дома вас ждут уютные беседки со столиками,
 				отдельные уголки для отдыха, мангал для гастрономических вечеров и
@@ -53,10 +49,8 @@ const Main = () => {
 				Расположение:
 			</Typography>
 			<Typography className={mainCN('Description')}
-				variant="body1"
-				component="p"
-				
-			
+			            variant="body1"
+			            component="p"
 			>
 				Гостевой дом удачно расположен в центре поселка, с легким доступом к
 				необходимой инфраструктуре: магазины, аптеки, банки, супермаркеты, такие
@@ -71,10 +65,8 @@ const Main = () => {
 				Развлечения и экскурсии:
 			</Typography>
 			<Typography className={mainCN('Description')}
-				variant="body1"
-				component="p"
-				
-			
+			            variant="body1"
+			            component="p"
 			>
 				Гостевой дом "У Наталии" станет отправной точкой для увлекательных
 				экскурсий по всему Крыму. В период отдыха предлагаются посещения
@@ -83,36 +75,30 @@ const Main = () => {
 				"Чуфут-кале" и Тарханкутского полуострова — самого чистого региона
 				Крыма, доступного через туристическое агентство.
 			</Typography>
-			<Typography className={mainCN('Subtitle')}
-			            variant={'h5'}>
-				Групповые поездки:
-			</Typography>
-			<Typography className={mainCN('Description')}
-				variant="body1"
-				component="p"
-				
-				
-			>
-				Для наших гостей мы организовываем увлекательные групповые поездки на
-				"Беляус", "Джангуль" и "Атлеш" ("Чаша любви").
-			</Typography>
+			{/*<Typography className={mainCN('Subtitle')}*/}
+			{/*            variant={'h5'}>*/}
+			{/*	Групповые поездки:*/}
+			{/*</Typography>*/}
+			{/*<Typography className={mainCN('Description')}*/}
+			{/*            variant="body1"*/}
+			{/*            component="p"*/}
+			{/*>*/}
+			{/*	Для наших гостей мы организовываем увлекательные групповые поездки на*/}
+			{/*	"Беляус", "Джангуль" и "Атлеш" ("Чаша любви").*/}
+			{/*</Typography>*/}
 			<Typography className={mainCN('Subtitle')}
 			            variant={'h5'}>
 				Как добраться:
 			</Typography>
 			<Typography className={mainCN('Description')}
-				variant="body1"
-				component="p"
-				
-				
+			            variant="body1"
+			            component="p"
 			>
 				Всего в пятистах метрах от гостевого дома расположена автостанция.
 			</Typography>
 			<Typography className={mainCN('Description')}
-				variant="body1"
-				component="p"
-				
-			
+			            variant="body1"
+			            component="p"
 			>
 				На автобусе: Из Симферополя или Евпатории до Черноморского. Интервал
 				движения из Евпатории составляет от 1 до 2 часов, время в пути от
@@ -120,18 +106,14 @@ const Main = () => {
 				автовокзала Черноморского до гостевого дома - всего 5 минут пешком.
 			</Typography>
 			<Typography className={mainCN('Description')}
-				variant="body1"
-				component="p"
-				
-		
+			            variant="body1"
+			            component="p"
 			>
 				На личном автомобиле: Из Симферополя - 2 часа, из Евпатории - 50 минут.
 			</Typography>
 			<Typography className={mainCN('Description')}
-				variant="body1"
-				component="p"
-				
-				
+			            variant="body1"
+			            component="p"
 			>
 				Встречаем на автовокзале пгт. Черноморское (бесплатно).
 			</Typography>
@@ -140,32 +122,29 @@ const Main = () => {
 				Трансфер (за отдельную плату):
 			</Typography>
 			<Typography className={mainCN('Description')}
-				variant="body1"
-				component="p"
-				
+			            variant="body1"
+			            component="p"
 			>
 				Симферополь Ж/Д - Черноморское
 			</Typography>
 			<Typography className={mainCN('Description')}
-				variant="body1"
-				component="p"
-				
+			            variant="body1"
+			            component="p"
 			>
 				Симферополь Аэропорт - Черноморское
 			</Typography>
 			<Typography className={mainCN('Description')}
-				variant="body1"
-				component="p"
-				
+			            variant="body1"
+			            component="p"
 			>
 				Евпатория Ж/Д, Автовокзал - Черноморское
 			</Typography>
 			<Typography className={mainCN('Subtitle')}
 			            variant={'h5'}>
-				Предоставление дополнительного места в номере доступно за отдельную
+				Дополнительное место в номере - за отдельную
 				плату.
 			</Typography>
-			<Typography className={mainCN('Title',{fontSize: 'lg'})}
+			<Typography className={mainCN('Title', {fontSize: 'lg'})}
 			            variant={'h5'}>
 				Приятного отдыха!
 			</Typography>

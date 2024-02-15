@@ -13,13 +13,12 @@ const CarouselPhoto = ({
 	                       autoPlay
                        }) => {
 	const [open, setOpen] = useState(false);
-	const [selectedImages, setSelectedImages] = useState(null);
+	const [selectedImage, setSelectedImage] = useState(null);
 	
+	console.log(selectedImage)
 	
-
-	
-	const handleClickOpen = (images) => {
-		setSelectedImages(images);
+	const handleClickOpen = (item) => {
+		setSelectedImage(items.indexOf(item));
 		setOpen(true);
 	};
 	
@@ -29,18 +28,19 @@ const CarouselPhoto = ({
 	
 	return (
 		<>
-			<Carousel navButtonsAlwaysVisible  autoPlay={autoPlay} className={carouselCN()}>
+			<Carousel navButtonsAlwaysVisible autoPlay={autoPlay}
+			          className={carouselCN()}>
 				{items.map((item) => (
 					<img
 						className={carouselCN('Image')}
 						key={item.id}
 						src={item.image}
 						alt={item.title}
-						onClick={() => handleClickOpen(items)}
+						onClick={() => handleClickOpen(item)}
 					/>
 				))}
 			</Carousel>
-			{selectedImages &&
+			{selectedImage !== null &&
 				(<Dialog maxWidth={"lg"} fullWidth className={modalPhotoCN()}
 				         open={open} onClose={handleClose}>
 					{/*<DialogTitle>{selectedImages[0].title}</DialogTitle>*/}
@@ -51,11 +51,12 @@ const CarouselPhoto = ({
 								<CloseIcon fontWeight={'500'}/>
 							</Button>
 						</DialogActions>
-						<Carousel navButtonsAlwaysVisible autoPlay={autoPlay}
+						<Carousel index={selectedImage}
+						          navButtonsAlwaysVisible autoPlay={autoPlay}
 						          className={modalPhotoCN('Carousel')}
 						>
-							{selectedImages.map((image) => (
-								<>
+							{items.map((image) => (
+								<div key={image.id}>
 									<h3 className={modalPhotoCN('Title')}>
 										{image.title}
 									</h3>
@@ -64,7 +65,7 @@ const CarouselPhoto = ({
 									     src={image.image}
 									     alt={image.title}
 									/>
-								</>
+								</div>
 							))}
 						</Carousel>
 					</DialogContent>

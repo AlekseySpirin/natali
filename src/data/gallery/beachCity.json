@@ -1,7 +1,7 @@
-[
+
   {
     "title": "Центральный пляж",
-    "id": 2,
+    "albumId": 2,
     "imageList": [
       {
         "id": 1,
@@ -40,11 +40,17 @@
       },
       {
         "id": 8,
-        "image": "image/photoGallery/city/city7.jpg",
+        "image": "image/photoGallery/city/city7.jpeg",
+        "title": "--Центральный пляж--"
+      }
+    ,
+      {
+        "id": 9,
+        "image": "image/photoGallery/city/city8.jpg",
         "title": "--Центральный пляж--"
       }
     ]
   }
-]
+
 
 
