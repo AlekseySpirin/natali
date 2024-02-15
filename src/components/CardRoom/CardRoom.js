@@ -13,6 +13,7 @@ import './CardRoom.scss';
 import {cn} from "@bem-react/classname";
 import {Grid} from "@mui/material";
 import CarouselPhoto from "../CarouselPhoto/CarouselPhoto";
+import { Table, TableBody, TableCell, TableContainer, TableRow } from '@mui/material';
 
 const ExpandMore = styled((props) => {
 	const {
@@ -38,6 +39,7 @@ const CardRoom = ({item}) => {
 		title,
 		subtitle,
 		description,
+		price,
 		image
 	} = item;
 	// console.log(image);
@@ -51,26 +53,53 @@ const CardRoom = ({item}) => {
 	return (
 		<Grid item xs={12} sm={10} md={5} component={'li'}>
 			<Card className={cardCN()} >
-				<CardHeader
+				<CardHeader className={cardCN('Title')}
 					title={title}
 					subheader={subtitle}
 				/>
-				<CardMedia // component="img"
+				<CardMedia className={cardCN('Image')} // component="img"
 					// height="194"
 					// image={image[0].image}
 					// alt="Комната №9"
 					>
 				<CarouselPhoto autoPlay={false} key={item.id} items={image}/>
 			</CardMedia>
-			{/*<CardContent>*/}
-			{/*	<Typography variant="body2" color="text.secondary">*/}
-			{/*		This impressive paella is a perfect party dish and a fun meal to cook*/}
-			{/*		together with your guests. Add 1 cup of frozen peas along with the*/}
-			{/*		mussels,*/}
-			{/*		if you like.*/}
-			{/*	</Typography>*/}
-			{/*</CardContent>*/}
-			<CardActions disableSpacing>
+				<CardContent sx={{ padding: '0', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+					{/*<Typography variant="h6" color="black">*/}
+					{/*	Цены:*/}
+					{/*</Typography>*/}
+					<TableContainer>
+						<Table>
+							{/*<TableHead>*/}
+							{/*	<TableRow>*/}
+							{/*		<TableCell>Месяц</TableCell>*/}
+							{/*		<TableCell align="center">Цена (руб.)</TableCell>*/}
+							{/*	</TableRow>*/}
+							{/*</TableHead>*/}
+							<TableBody>
+								<TableRow>
+									<TableCell>Май-Июнь</TableCell>
+									<TableCell align="right">
+										{price.june} руб.
+									</TableCell>
+								</TableRow>
+								<TableRow>
+									<TableCell>Июль-Август</TableCell>
+									<TableCell align="right">
+										{price.july} руб.
+									</TableCell>
+								</TableRow>
+								<TableRow>
+									<TableCell>Сентябрь</TableCell>
+									<TableCell align="right">
+										{price.september} руб.
+									</TableCell>
+								</TableRow>
+							</TableBody>
+						</Table>
+					</TableContainer>
+				</CardContent>
+			<CardActions disableSpacing sx={{padding: 0}}>
 				<ExpandMore
 					expand={expanded}
 					onClick={handleExpandClick}

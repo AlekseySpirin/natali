@@ -1,9 +1,26 @@
 .Card {
+
   &.MuiCard-root {
     width: 100%;
     background-color: rgba(255, 231, 201, 0.46);
 
   }
+
+  &-Title {
+
+    & .MuiTypography-root {
+    }
+  }
+  &-Image {
+    img {
+      &:hover {
+        opacity: .7;
+      }
+    }
+
+  }
+
+
   &-Description {
     &.MuiTypography-root {
       text-align: justify;
