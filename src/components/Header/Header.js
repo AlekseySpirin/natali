@@ -1,19 +1,38 @@
 import React from 'react';
-import {AppBar, IconButton, Stack, Toolbar, Typography} from "@mui/material";
+import {
+	AppBar,
+	IconButton,
+	Stack,
+	Toolbar,
+	Typography,
+	useMediaQuery
+} from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
+import KingBedIcon from '@mui/icons-material/KingBed';
+import HomeIcon from '@mui/icons-material/Home';
+import ContactPageIcon from '@mui/icons-material/ContactPage';
+import BurgerMenu from "../BurgerMenu/BurgerMenu";
 import {cn} from "@bem-react/classname";
 import './Header.scss';
 import Logo from '../Logo/Logo';
+import CollectionsIcon from '@mui/icons-material/Collections';
 import {
 	CONTACTS_ROUTE,
 	GALLERY_ROUTE,
 	MAIN_ROUTE,
 	PRICE_ROUTE
 } from "../../utils/constants";
-import { useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 const Header = () => {
 	const navigate = useNavigate();
+	const [burgerOpen, setBurgerOpen] = React.useState(false);
+	const isMobile = useMediaQuery('(max-width:768px)');
+	
+	const handleBurgerClick = () => {
+		setBurgerOpen(!burgerOpen);
+	};
+	
 	const handleMainRouteClick = () => {
 		navigate(MAIN_ROUTE);
 	};
@@ -32,88 +51,100 @@ const Header = () => {
 	
 	const toolbar = cn('Toolbar');
 	
+	const sections = [
+		{
+			label: 'Главная',
+			icon: <HomeIcon/>,
+			onClick: handleMainRouteClick
+		},
+		{
+			label: 'Проживание и цены',
+			icon: <KingBedIcon/>,
+			onClick: handlePriceRouteClick
+		},
+		{
+			label: 'Галерея',
+			icon: <CollectionsIcon/>,
+			onClick: handleGalleryRouteClick
+		},
+		{
+			label: 'Контакты',
+			icon: <ContactPageIcon/>,
+			onClick: handleContactsRouteClick
+		},
+	];
+	
 	return (
 		<AppBar className={toolbar('Wrapper')}>
-			<Stack className={toolbar('Info')}>
-				<Logo/>
-				<Typography className={toolbar('Title')}
-				            marginLeft={'20px'}
-				            fontStyle={'italic'}
-				            maxWidth={'500px'}
-				            fontFamily={'cursive'}
-				            justifyContent={'center'}
-				            alignItems={'center'}
-				            variant="h3"
-				            component="div"
-				            sx={{flexGrow: 1}}
-				>
-					"У Наталии"
-				</Typography>
-				<Typography className={toolbar('Title')}
-				            marginLeft={'20px'}
-				            fontStyle={'italic'}
-				            maxWidth={'500px'}
-				            fontFamily={'cursive'}
-				            justifyContent={'center'}
-				            alignItems={'center'}
-				            variant="h5"
-				            component="div"
-				            sx={{flexGrow: 1}}
-				>
-					+7(978) 732-26-67
-				</Typography>
-			</Stack>
-			<Toolbar className={toolbar()} variant="dense">
-				<IconButton className={toolbar('Icon')}
-				            size="large"
-				            edge="start"
-				            color="inherit"
-				            aria-label="menu"
-				            sx={{mr: 2}}
-				            
-				>
-					
-					<MenuIcon />
-				</IconButton>
-				<Typography className={toolbar('Item')}
-				            variant="h6"
-				            component="div"
-				            textAlign={'center'}
-				            sx={{flexGrow: 1}}
-				            onClick={handleMainRouteClick}
-				>
-					Главная
-				</Typography>
-				<Typography className={toolbar('Item')}
-				            variant="h6"
-				            component="div"
-				            sx={{flexGrow: 1}}
-				            textAlign={'center'}
-				            onClick={handlePriceRouteClick}
-				          
-				>
-					Проживание и цены
-				</Typography>
-				<Typography className={toolbar('Item')}
-				            variant="h6"
-				            component="div"
-				            sx={{flexGrow: 1}}
-				            align={"center"}
-				            textAlign={'center'}
-				            onClick={handleGalleryRouteClick}
-				>
-					Галерея
-				</Typography>
-				<Typography className={toolbar('Item')}
-				            variant="h6"
-				            component="div"
-				            sx={{flexGrow: 1}}
-				            textAlign={'center'}
-				            onClick={handleContactsRouteClick}
-				>
-					Контакты
-				</Typography>
-			</Toolbar>
+			{!isMobile &&
+				<Stack className={toolbar('Info')}>
+					<Stack sx={{
+						justifyContent: 'center',
+						flexDirection: 'row',
+						
+					}}>
+						<Logo width={'100px'} height={'100px'}/>
+						<Typography className={toolbar('Title')}
+						            component="h1"
+						>
+							"У Наталии"
+						</Typography>
+					</Stack>
+					<Typography className={toolbar('Subtitle')}
+					            component="h2"
+					>
+						Телефон для брони: +7(978) 732-26-67
+					</Typography>
+				</Stack>}
+			{isMobile ? (
+				// Отображаем второй тулбар для мобильных устройств
+				<Toolbar className={toolbar()} sx={{padding: 0}} variant="dense">
+					<Stack direction="row" alignItems="center" spacing={2}>
+						<IconButton className={toolbar('Icon')}
+						            size="large"
+						            edge="start"
+						            color="inherit"
+						            aria-label="menu"
+						            sx={{mr: 2}}
+						            onClick={handleBurgerClick}
+						>
+							<MenuIcon/>
+						</IconButton>
+						<Stack sx={{
+							justifyContent: 'space-between',
+							alignItems: 'center',
+							flexDirection: 'row',
+							width: '100%'
+							
+						}}>
+							<Logo width={'50px'} height={'50px'}/>
+							<Typography className={toolbar('Title')}
+							            component="h1"
+							            sx={{fontSize: '30px'}}
+							>
+								"У Наталии"
+							</Typography>
+						</Stack>
+					</Stack>
+				</Toolbar>
+			) : (
+				// Отображаем первый тулбар для широких экранов
+				<Toolbar className={toolbar()} sx={{padding: 0}} variant="dense">
+					{sections.map((section) => (
+						<Typography key={section.label} className={toolbar('Item')}
+						            variant="h6"
+						            component="div"
+						            textAlign={'center'}
+						            sx={{flexGrow: 1}}
+						            onClick={section.onClick}
+						>
+							{section.label}
+						</Typography>
+					))}
+				</Toolbar>
+			)}
+			<BurgerMenu sections={sections} open={burgerOpen}
+			            onClose={() => setBurgerOpen(false)}/>
 		</AppBar>
 	);
 };

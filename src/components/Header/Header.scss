@@ -7,9 +7,9 @@
   }
 
   &-Info {
-    margin-top: 20px;
-    width: 70%;
-    justify-content: start;
+    margin: 20px 20px 0 20px;
+    width: 100%;
+    justify-content: space-around;
     position: relative;
 
     &.MuiStack-root {
@@ -24,19 +24,39 @@
       align-items: center;
     }
   }
-
-  &-Icon {
-    &.MuiIconButton-root {
-      display: none;
-    }
-
-  }
+  //
+  //&-Icon {
+  //  &.MuiIconButton-root {
+  //    display: none;
+  //  }
+  //
+  //}
 
   &-Title {
     &.MuiTypography-root {
+      padding-left: 20px;
+      font-style: italic;
+      max-width: 310px;
+      font-family: cursive;
+      //font-size: 48px;
+      font-size: clamp(25px, 5vw, 45px);
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-grow: 1;
+    }
+  }
+  &-Subtitle {
+    &.MuiTypography-root {
+      padding-left: 20px;
+      font-style: italic;
+      max-width: 310px;
+      font-family: cursive;
+      font-size: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-grow: 1;
     }
   }
 
@@ -64,46 +84,11 @@
 
 }
 
+
 @media (max-width: 768px) {
   .Toolbar {
-
     &.MuiToolbar-root {
       width: 100%;
     }
-
-  }
-}
-
-@media (max-width: 600px) {
-  .Toolbar {
-
-
-    &-Icon {
-      &.MuiIconButton-root {
-        margin-left: 10px;
-        display: inline-flex;
-      }
-
-    }
-
-    &-Item {
-      &.MuiTypography-root {
-        display: none;
-      }
-    }
-
-
-  }
-}
-
-
-@media (max-width: 475px) {
-  .Toolbar {
-    &-Info {
-      &.MuiStack-root {
-        display: none;
-      }
-    }
-
   }
 }
