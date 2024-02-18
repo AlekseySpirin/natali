@@ -9,14 +9,10 @@ import {
 } from "@mui/material";
 import { cn } from "@bem-react/classname";
 import './Footer.scss'
+import TelegramIcon from '../TelegramIcon/TelegramIcon'
+import WhatsAppIcon from "../WhatsAppIcon/WhatsAppIcon";
 
-function WhatsAppIcon() {
-	return null;
-}
 
-function TelegramIcon() {
-	return null;
-}
 
 const footerCN = cn('Footer');
 
@@ -24,7 +20,7 @@ const Footer = () => {
 	return (
 		<BottomNavigation className={footerCN('Wrapper')} component={'footer'}>
 			<Toolbar className={footerCN()}>
-				<Grid container justifyContent="space-between">
+				<Grid container sx={{width: '100%'}} justifyContent="space-between">
 					<Grid item>
 						<Typography variant="body1" color="inherit">
 							<span style={{ fontWeight: 'bold' }}>Телефон:</span> +7(978) 732-26-67
@@ -37,14 +33,14 @@ const Footer = () => {
 						</Typography>
 					</Grid>
 					<Grid item>
-						<Link href="https://wa.me/123456789" color="inherit">
+						<Link target={'_blank'}  href="https://wa.me/79787322667" color="inherit">
 							<IconButton color="inherit">
-								<WhatsAppIcon />
+								<WhatsAppIcon height={'40px'} width={'40px'}/>
 							</IconButton>
 						</Link>
-						<Link href="https://t.me/yourtelegram" color="inherit">
+						<Link target={'_blank'}  href="https://t.me/spirin_al" color="inherit">
 							<IconButton color="inherit">
-								<TelegramIcon />
+								<TelegramIcon height={'40px'} width={'40px'}/>
 							</IconButton>
 						</Link>
 					</Grid>

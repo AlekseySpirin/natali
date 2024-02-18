@@ -1,17 +1,22 @@
 .Footer {
-  width: 80%;
+  max-width: 1200px;
   color: #FFFFFF;
-  &.MuiToolbar-root{
-    padding-left: 50px;
+  margin: 10px;
+
+  &.MuiToolbar-root {
+    width: 100%;
+
   }
+
   &-Wrapper {
 
     width: 100%;
+
     &.MuiBottomNavigation-root {
       width: 100%;
       position: relative;
       background-color: #2580DB;
-      min-height: 15vh;
+      height: auto;
     }
   }
 }

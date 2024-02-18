@@ -2,6 +2,7 @@ import React from 'react';
 import {
 	AppBar,
 	IconButton,
+	Link,
 	Stack,
 	Toolbar,
 	Typography,
@@ -23,6 +24,8 @@ import {
 	PRICE_ROUTE
 } from "../../utils/constants";
 import {useNavigate} from "react-router-dom";
+import WhatsAppIcon from "../WhatsAppIcon/WhatsAppIcon";
+import TelegramIcon from "../TelegramIcon/TelegramIcon";
 
 const Header = () => {
 	const navigate = useNavigate();
@@ -90,11 +93,25 @@ const Header = () => {
 							"У Наталии"
 						</Typography>
 					</Stack>
-					<Typography className={toolbar('Subtitle')}
-					            component="h2"
-					>
-						Телефон для брони: +7(978) 732-26-67
-					</Typography>
+					<Stack flexDirection={'row'} alignItems={'center'}>
+						<Typography className={toolbar('Subtitle')}
+						            component="h2"
+						>
+							Телефон для брони: +7(978) 732-26-67
+						</Typography>
+						<Link target={'_blank'} href="https://wa.me/79787322667"
+						      color="inherit">
+							<IconButton color="inherit">
+								<WhatsAppIcon height={'40px'} width={'40px'}/>
+							</IconButton>
+						</Link>
+						<Link target={'_blank'} href="https://t.me/spirin_al"
+						      color="inherit">
+							<IconButton color="inherit">
+								<TelegramIcon height={'40px'} width={'40px'}/>
+							</IconButton>
+						</Link>
+					</Stack>
 				</Stack>}
 			{isMobile ? (
 				// Отображаем второй тулбар для мобильных устройств

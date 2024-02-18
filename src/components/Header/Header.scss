@@ -1,6 +1,7 @@
 .Toolbar {
 
   &.MuiToolbar-root {
+    padding: 0;
     height: 6vh;
     width: 80%;
 
@@ -48,11 +49,9 @@
   }
   &-Subtitle {
     &.MuiTypography-root {
-      padding-left: 20px;
       font-style: italic;
-      max-width: 310px;
-      font-family: cursive;
-      font-size: 30px;
+      max-width: 250px;
+      font-size: clamp(15px, 5vw, 25px);
       display: flex;
       justify-content: center;
       align-items: center;

@@ -1,7 +1,9 @@
 import React from 'react';
-import {Drawer, IconButton} from '@mui/material';
+import {Drawer, IconButton, Link, Stack} from '@mui/material';
 import { ListItemText, ListItemIcon, ListItemButton, ListItem, List, Box } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
+import WhatsAppIcon from "../WhatsAppIcon/WhatsAppIcon";
+import TelegramIcon from "../TelegramIcon/TelegramIcon";
 
 
 const BurgerMenu = ({ sections, open, onClose }) => {
@@ -35,6 +37,20 @@ const BurgerMenu = ({ sections, open, onClose }) => {
 							</ListItemButton>
 						</ListItem>
 					))}
+					<Stack flexDirection={'row'} justifyContent={'center'} alignItems={'center'}>
+						<Link target={'_blank'} href="https://wa.me/79787322667"
+						      color="inherit">
+							<IconButton color="inherit">
+								<WhatsAppIcon height={'40px'} width={'40px'}/>
+							</IconButton>
+						</Link>
+						<Link target={'_blank'} href="https://t.me/spirin_al"
+						      color="inherit">
+							<IconButton color="inherit">
+								<TelegramIcon height={'40px'} width={'40px'}/>
+							</IconButton>
+						</Link>
+					</Stack>
 				</List>
 			</Box>
 		</Drawer>
