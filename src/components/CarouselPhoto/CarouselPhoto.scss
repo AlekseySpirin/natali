@@ -1,5 +1,6 @@
 .Carousel {
   position: relative;
+  width: 100%;
 
   &-Image {
     aspect-ratio: 16 / 9;
@@ -14,14 +15,6 @@
 
 .ModalPhoto {
   position: relative;
-  //& .MuiPaper-root {
-  //  background-color: transparent;
-  //  color: #FFFFFF;
-  //  box-shadow: none;
-  //}
-  //& .MuiBackdrop-root {
-  //  background-color: rgba(0, 0, 0, 0.9);
-  //}
 
   &-Carousel {
     position: relative;
@@ -30,8 +23,12 @@
   &-Image {
     aspect-ratio: 16 / 9;
     width: 100%;
+    max-width: 100%;
     object-fit: contain;
     border-radius: 10px;
+    max-height: 100vh;
+    margin: 0 auto;
+    display: block;
   }
 
   &-Title {

@@ -9,7 +9,7 @@ const Contacts = () => {
 	return (
 		<main className={contactsCN()}>
 			<Grid container className={contactsCN('Container')}>
-				<Grid xs={12} sm={12} md={12} item>
+				<Grid item>
 					<Typography className={contactsCN('Title')}
 					>
 						Контакты
@@ -18,30 +18,26 @@ const Contacts = () => {
 					     src="image/courtyard/courtyard2.jpg"
 					     alt=""/>
 					<Typography className={contactsCN('Description')}
-					            fontWeight={700}
-					            marginTop={'20px'}
-					            marginLeft={'20px'}
-					            variant="h5"
 					            color="inherit">
-						<span style={{fontWeight: '700'}}>Телефон, WhatsApp:</span> +7(978)
-						732-26-67
+						<span className={contactsCN('Span')}>
+							Телефон, WhatsApp:
+						</span> +7(978) 732-26-67
 					</Typography>
-					<Typography className={contactsCN('Description')} marginTop={'20px'}
-					            fontWeight={700} marginLeft={'20px'} variant="h5"
+					<Typography className={contactsCN('Description')}
 					            color="inherit">
-						<span
-							style={{fontWeight: '700'}}>Электронная почта:</span> maydaynatalia@ya.ru
+						<span className={contactsCN('Span')}>
+							Электронная почта:
+						</span>						maydaynatalia@ya.ru
 					</Typography>
-					<Typography className={contactsCN('Description')} marginTop={'20px'}
-					            fontWeight={700} marginLeft={'20px'} variant="h5"
+					<Typography className={contactsCN('Description')}
 					            color="inherit">
-						<span style={{fontWeight: '700'}}>Адрес:</span> Россия, Республика
-						Крым, пгт. Черноморское, ул. Первомайская 7
+						<span className={contactsCN('Span')}>
+							Адрес:
+						</span>						Россия, Республика Крым, пгт. Черноморское, ул. Первомайская 7
 					</Typography>
-					<Typography className={contactsCN('Description')} marginTop={'50px'}
-					            fontWeight={700} marginLeft={'20px'} variant="h5"
+					<Typography className={contactsCN('Description')}
 					            color="inherit">
-						Контактное лицо: Наталия
+						<span className={contactsCN('Span')}>Контактное лицо:</span> Наталия
 					</Typography>
 				</Grid>
 			</Grid>

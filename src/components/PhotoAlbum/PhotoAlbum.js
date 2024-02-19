@@ -87,7 +87,7 @@ const PhotoAlbum = () => {
 					<div>Загрузка...</div>
 				)}
 			</Grid>
-			<Dialog maxWidth={"lg"} fullWidth className={modalPhotoCN()} open={open}
+			<Dialog maxWidth={"lg"} fullScreen className={modalPhotoCN()} open={open}
 			        onClose={handleClose}>
 				<DialogContent>
 					<DialogActions>
@@ -102,9 +102,9 @@ const PhotoAlbum = () => {
 						className={modalPhotoCN('Carousel')}>
 						{imageList.map((image) => (
 							<div key={image.id}>
-								<h3 className={modalPhotoCN('Title')}>
-									{image.title}
-								</h3>
+								{/*<h3 className={modalPhotoCN('Title')}>*/}
+								{/*	{image.title}*/}
+								{/*</h3>*/}
 								<img className={modalPhotoCN('Image')} src={`/${image.image}`}
 								     alt={image.title}/>
 							</div>

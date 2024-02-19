@@ -15,8 +15,6 @@ const CarouselPhoto = ({
 	const [open, setOpen] = useState(false);
 	const [selectedImage, setSelectedImage] = useState(null);
 	
-	console.log(selectedImage)
-	
 	const handleClickOpen = (item) => {
 		setSelectedImage(items.indexOf(item));
 		setOpen(true);
@@ -41,8 +39,12 @@ const CarouselPhoto = ({
 				))}
 			</Carousel>
 			{selectedImage !== null &&
-				(<Dialog maxWidth={"lg"} fullWidth className={modalPhotoCN()}
-				         open={open} onClose={handleClose}>
+				(<Dialog maxWidth={"lg"}
+				         // fullWidth
+				         fullScreen
+				         className={modalPhotoCN()}
+				         open={open}
+				         onClose={handleClose}>
 					{/*<DialogTitle>{selectedImages[0].title}</DialogTitle>*/}
 					<DialogContent>
 						<DialogActions>
@@ -57,9 +59,9 @@ const CarouselPhoto = ({
 						>
 							{items.map((image) => (
 								<div key={image.id}>
-									<h3 className={modalPhotoCN('Title')}>
-										{image.title}
-									</h3>
+									{/*<h3 className={modalPhotoCN('Title')}>*/}
+									{/*	{image.title}*/}
+									{/*</h3>*/}
 									<img className={modalPhotoCN('Image')}
 									     key={image.id}
 									     src={image.image}

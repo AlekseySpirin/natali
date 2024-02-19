@@ -36,13 +36,16 @@
 
   &-Description {
     &.MuiTypography-root {
-      font-size: clamp(15px, 4vw, 15px);
+      font-size: clamp(15px, 4vw, 18px);
       margin: 20px 10px;
       box-sizing: border-box;
-      font-weight: 700;
+      font-weight: 500;
       flex-grow: 1;
 
     }
+  }
+  &-Span {
+    font-weight: 700;
   }
 }
 //
