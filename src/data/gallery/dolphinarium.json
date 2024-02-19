@@ -1,0 +1,39 @@
+[
+  {
+    "title": "Дельфинарий",
+    "albumId": 8,
+    "description": "Дельфинарий - находится в природном парке \"Тарханкутский\", в 30 км от пгт. Черноморское. В дельфинарии шоу-программа черноморских дельфинов, фото с дельфинами и элементы дельфинотерапии, а также купание с дельфинами. ",
+    "imageList": [
+      {
+        "id": 1,
+        "image": "image/photoGallery/dolphinarium/dolphinarium.jpeg",
+        "title": "--Дельфинарий--"
+      },
+      {
+        "id": 2,
+        "image": "image/photoGallery/dolphinarium/dolphinarium1.jpg",
+        "title": "--Дельфинарий--"
+      },
+      {
+        "id": 3,
+        "image": "image/photoGallery/dolphinarium/dolphinarium2.jpg",
+        "title": "--Дельфинарий--"
+      },
+      {
+        "id": 4,
+        "image": "image/photoGallery/dolphinarium/dolphinarium3.jpg",
+        "title": "--Дельфинарий--"
+      },
+      {
+        "id": 5,
+        "image": "image/photoGallery/dolphinarium/dolphinarium4.jpg",
+        "title": "--Дельфинарий--"
+      },
+      {
+        "id": 6,
+        "image": "image/photoGallery/dolphinarium/dolphinarium5.jpeg",
+        "title": "--Дельфинарий--"
+      }
+    ]
+  }
+]

@@ -5,6 +5,7 @@ import calosLimen from '../data/gallery/calosLimen.json';
 import ribzik from '../data/gallery/ribzik.json';
 import rocks from '../data/gallery/rocks.json';
 import combineArrays from "./arrayUtils";
+import dolphinarium from '../data/gallery/dolphinarium.json';
 
 export const MAIN_ROUTE = '/main';
 export const PRICE_ROUTE = '/price';
@@ -17,7 +18,9 @@ export const albums = combineArrays(
 	belyaus,
 	calosLimen,
 	ribzik,
-	rocks
+	rocks,
+	dolphinarium
+	
 );
 
 

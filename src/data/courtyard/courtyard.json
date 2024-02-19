@@ -28,5 +28,20 @@
     "id": 7,
     "image": "image/courtyard/courtyard1.jpg",
     "title": "--Стоянка--"
+  },
+  {
+    "id": 8,
+    "image": "image/kitchen/kitchen.jpg",
+    "title": "--Кухня--"
+  },
+  {
+    "id": 9,
+    "image": "image/kitchen/kitchen1.jpg",
+    "title": "--Кухня--"
+  },
+  {
+    "id": 10,
+    "image": "image/kitchen/kitchen2.jpg",
+    "title": "--Кухня--"
   }
 ]

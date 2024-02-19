@@ -12,6 +12,12 @@
       aspect-ratio: 16 / 9;
     }
   }
+  &-Description {
+    &.MuiTypography-root {
+      text-align: justify;
+      text-indent: 20px;
+    }
+  }
 
   &-Link {
     text-decoration: none;
