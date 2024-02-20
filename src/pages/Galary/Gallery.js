@@ -16,7 +16,7 @@ const Gallery = () => {
 			<Grid className={photoAlbumList()} container justifyContent={'center'}
 			      component={'ul'}>
 				{albums.map(item =>
-					<PhotoAlbumList key={item.id} item={item}/>
+					<PhotoAlbumList key={item.albumId} item={item}/>
 				)}
 			</Grid>
 		</main>

@@ -16,12 +16,7 @@
       font-size: clamp(20px, 4vw, 35px);
 
     }
-    //&_fontSize_lg {
-    //  &.MuiTypography-root {
-    //    font-size: 40px;
-    //  }
-    //
-    //}
+
   }
   &-Subtitle {
     &.MuiTypography-root {
@@ -62,7 +57,7 @@
 
     &-Subtitle {
       &.MuiTypography-root {
-        margin: 0 15px;
+        margin: 8px 15px;
 
       }
     }

@@ -20,7 +20,7 @@ const Contacts = () => {
 					<Typography className={contactsCN('Description')}
 					            color="inherit">
 						<span className={contactsCN('Span')}>
-							Телефон, WhatsApp:
+							Телефон, WhatsApp, Telegram:
 						</span> +7(978) 732-26-67
 					</Typography>
 					<Typography className={contactsCN('Description')}

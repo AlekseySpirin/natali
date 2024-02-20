@@ -2,7 +2,7 @@ import React from 'react';
 import {cn} from "@bem-react/classname";
 import './Main.scss';
 import CarouselPhoto from "../../components/CarouselPhoto/CarouselPhoto";
-import {Typography} from "@mui/material";
+import {Box, Typography} from "@mui/material";
 import mainSlider from "../../data/courtyard/courtyard.json";
 import mainDescription from '../../data/mainDescription/mainDescription.json'
 
@@ -26,7 +26,7 @@ const Main = () => {
 				и впечатляющих скалистых берегов.
 			</Typography>
 			{mainDescription.map(item => (
-				<>
+				<Box key={item.subtitle}>
 					<Typography className={mainCN('Subtitle')} component={'h4'}>
 						{item.subtitle}
 					</Typography>
@@ -42,7 +42,7 @@ const Main = () => {
 							{item.description}
 						</Typography>
 					)}
-				</>
+				</Box>
 				)
 			)}
 			<Typography className={mainCN('Title')}
@@ -51,7 +51,6 @@ const Main = () => {
 			</Typography>;
 		</main>
 	)
-		;
 };
 
 export default Main;
