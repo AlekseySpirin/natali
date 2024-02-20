@@ -15,7 +15,7 @@ const Contacts = () => {
 						Контакты
 					</Typography>
 					<img className={contactsCN('Image')}
-					     src="image/courtyard/courtyard2.jpg"
+					     src={"image/courtyard/courtyard2.jpg"}
 					     alt=""/>
 					<Typography className={contactsCN('Description')}
 					            color="inherit">

@@ -1,6 +1,6 @@
 .Main {
   position: relative;
-  width: 80%;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -11,23 +11,35 @@
   margin: 10px 50px;
   font-weight: 700;
   text-align: center;
-}
-.Main-Title_fontSize_lg.MuiTypography-root {
-  font-size: 40px;
+  font-size: clamp(20px, 4vw, 35px);
 }
 .Main-Subtitle.MuiTypography-root {
   margin: 10px 50px;
   font-weight: 600;
+  font-size: clamp(20px, 4vw, 35px);
 }
 .Main-Description.MuiTypography-root {
   margin: 10px 50px;
+  font-size: clamp(14px, 4vw, 19px);
   text-indent: 20px;
-  text-align: justify-all;
+  text-align: justify;
+  word-wrap: break-word;
 }
 
-@media (max-width: 475px) {
+@media (max-width: 1200px) {
   .Main {
     width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .Main-Title.MuiTypography-root {
+    margin: 0 15px;
+  }
+  .Main-Subtitle.MuiTypography-root {
+    margin: 8px 15px;
+  }
+  .Main-Description.MuiTypography-root {
+    margin: 0 15px;
   }
 }
 

@@ -22,7 +22,7 @@ import {styled} from "@mui/material/styles";
 const burgerMenuCN = cn('BurgerMenu');
 
 // Create a styled ListItemButton
-const StyledListItemButton = styled(ListItemButton)(({ theme }) => ({
+const StyledListItemButton = styled(ListItemButton)(() => ({
 	'&.Mui-selected': {
 		backgroundColor: 'rgba(21, 101, 192, 0.8)',
 		'&:hover': {
