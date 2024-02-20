@@ -66,14 +66,22 @@ const PhotoAlbumList = ({item}) => {
 					{/*		{description}*/}
 					{/*	</Typography>*/}
 					{/*</CardContent>*/}
-					<CardActions disableSpacing sx={{padding: 0}}>
+					<CardActions  disableSpacing sx={{padding: 0}}>
+						<Typography variant="subtitle1" sx={{
+							margin: 'auto 0 auto 16px',
+							color: 'black',
+							width: '100%',
+							textAlign: 'center'
+						}}>
+							Подробнее
+						</Typography>
 						<ExpandMore
 							expand={expanded}
 							onClick={handleExpandClick}
 							aria-expanded={expanded}
 							aria-label="show more"
 						>
-							<ExpandMoreIcon/>
+							<ExpandMoreIcon fontSize={'large'}/>
 						</ExpandMore>
 					</CardActions>
 					<Collapse in={expanded} timeout="auto" unmountOnExit>

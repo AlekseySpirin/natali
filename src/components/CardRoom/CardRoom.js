@@ -11,9 +11,15 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import './CardRoom.scss';
 import {cn} from "@bem-react/classname";
-import {Grid} from "@mui/material";
+import {
+	Grid,
+	Table,
+	TableBody,
+	TableCell,
+	TableContainer,
+	TableRow
+} from "@mui/material";
 import CarouselPhoto from "../CarouselPhoto/CarouselPhoto";
-import { Table, TableBody, TableCell, TableContainer, TableRow } from '@mui/material';
 
 const ExpandMore = styled((props) => {
 	const {
@@ -52,19 +58,25 @@ const CardRoom = ({item}) => {
 	
 	return (
 		<Grid item xs={12} sm={10} md={5} component={'li'}>
-			<Card className={cardCN()} >
+			<Card className={cardCN()}>
 				<CardHeader className={cardCN('Title')}
-					title={title}
-					subheader={subtitle}
+				            title={title}
+				            subheader={subtitle}
 				/>
 				<CardMedia className={cardCN('Image')} // component="img"
 					// height="194"
 					// image={image[0].image}
 					// alt="Комната №9"
-					>
-				<CarouselPhoto autoPlay={false} key={item.id} items={image}/>
-			</CardMedia>
-				<CardContent sx={{ padding: '0', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+				>
+					<CarouselPhoto autoPlay={false} key={item.id} items={image}/>
+				</CardMedia>
+				<CardContent sx={{
+					padding: '0',
+					display: 'flex',
+					flexDirection: 'column',
+					alignItems: 'center',
+					textAlign: 'center'
+				}}>
 					{/*<Typography variant="h6" color="black">*/}
 					{/*	Цены:*/}
 					{/*</Typography>*/}
@@ -99,27 +111,35 @@ const CardRoom = ({item}) => {
 						</Table>
 					</TableContainer>
 				</CardContent>
-			<CardActions disableSpacing sx={{padding: 0}}>
-				<ExpandMore
-					expand={expanded}
-					onClick={handleExpandClick}
-					aria-expanded={expanded}
-					aria-label="show more"
-				>
-					<ExpandMoreIcon/>
-				</ExpandMore>
-			</CardActions>
-			<Collapse in={expanded} timeout="auto" unmountOnExit>
-				<CardContent>
-					<Typography className={cardCN('Description')} paragraph>
-						{description}
+				<CardActions disableSpacing sx={{padding: 0}}>
+					<Typography variant="subtitle1" sx={{
+						margin: 'auto 0 auto 16px',
+						color: 'black',
+						width: '100%',
+						textAlign: 'center'
+					}}>
+						Подробнее
 					</Typography>
-				</CardContent>
-			</Collapse>
-		</Card>
-</Grid>
-)
-	;
+					<ExpandMore
+						expand={expanded}
+						onClick={handleExpandClick}
+						aria-expanded={expanded}
+						aria-label="show more"
+					>
+						<ExpandMoreIcon fontSize={'large'}/>
+					</ExpandMore>
+				</CardActions>
+				<Collapse in={expanded} timeout="auto" unmountOnExit>
+					<CardContent>
+						<Typography className={cardCN('Description')} paragraph>
+							{description}
+						</Typography>
+					</CardContent>
+				</Collapse>
+			</Card>
+		</Grid>
+	)
+		;
 };
 
 export default CardRoom;
