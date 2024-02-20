@@ -1,9 +1,11 @@
 .Toolbar {
+  max-width: 1200px;
 
   &.MuiToolbar-root {
     padding: 0;
     height: 6vh;
-    width: 80%;
+    width: 100%;
+    max-width: 1200px;
 
   }
 
@@ -25,6 +27,7 @@
       align-items: center;
     }
   }
+
   //
   //&-Icon {
   //  &.MuiIconButton-root {
@@ -47,6 +50,7 @@
       flex-grow: 1;
     }
   }
+
   &-Subtitle {
     &.MuiTypography-root {
       font-style: italic;
@@ -72,7 +76,14 @@
     }
 
 
+    &_active {
+      opacity: 0.8;
+      background-color: #1565c0;
+    }
+
   }
+
+
 
   &-Item:hover {
     cursor: pointer;

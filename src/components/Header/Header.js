@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
 	AppBar,
 	IconButton,
@@ -29,8 +29,9 @@ import TelegramIcon from "../TelegramIcon/TelegramIcon";
 
 const Header = () => {
 	const navigate = useNavigate();
-	const [burgerOpen, setBurgerOpen] = React.useState(false);
+	const [burgerOpen, setBurgerOpen] = useState(false);
 	const isMobile = useMediaQuery('(max-width:768px)');
+	const [activeSection, setActiveSection] = useState(0);
 	
 	const handleBurgerClick = () => {
 		setBurgerOpen(!burgerOpen);
@@ -38,18 +39,22 @@ const Header = () => {
 	
 	const handleMainRouteClick = () => {
 		navigate(MAIN_ROUTE);
+		setActiveSection(0);
 	};
 	
 	const handlePriceRouteClick = () => {
 		navigate(PRICE_ROUTE);
+		setActiveSection(1);
 	};
 	
 	const handleGalleryRouteClick = () => {
 		navigate(GALLERY_ROUTE);
+		setActiveSection(2);
 	};
 	
 	const handleContactsRouteClick = () => {
 		navigate(CONTACTS_ROUTE);
+		setActiveSection(3);
 	};
 	
 	const toolbar = cn('Toolbar');
@@ -57,23 +62,27 @@ const Header = () => {
 	const sections = [
 		{
 			label: 'Главная',
-			icon: <HomeIcon/>,
-			onClick: handleMainRouteClick
+			icon: <HomeIcon />,
+			onClick: handleMainRouteClick,
+			active: activeSection === 0,
 		},
 		{
 			label: 'Проживание и цены',
-			icon: <KingBedIcon/>,
-			onClick: handlePriceRouteClick
+			icon: <KingBedIcon />,
+			onClick: handlePriceRouteClick,
+			active: activeSection === 1,
 		},
 		{
 			label: 'Галерея',
-			icon: <CollectionsIcon/>,
-			onClick: handleGalleryRouteClick
+			icon: <CollectionsIcon />,
+			onClick: handleGalleryRouteClick,
+			active: activeSection === 2,
 		},
 		{
 			label: 'Контакты',
-			icon: <ContactPageIcon/>,
-			onClick: handleContactsRouteClick
+			icon: <ContactPageIcon />,
+			onClick: handleContactsRouteClick,
+			active: activeSection === 3,
 		},
 	];
 	
@@ -114,7 +123,6 @@ const Header = () => {
 					</Stack>
 				</Stack>}
 			{isMobile ? (
-				// Отображаем второй тулбар для мобильных устройств
 				<Toolbar className={toolbar()} sx={{padding: 0}} variant="dense">
 					<Stack direction="row" alignItems="center" spacing={2}>
 						<IconButton className={toolbar('Icon')}
@@ -145,10 +153,10 @@ const Header = () => {
 					</Stack>
 				</Toolbar>
 			) : (
-				// Отображаем первый тулбар для широких экранов
 				<Toolbar className={toolbar()} sx={{padding: 0}} variant="dense">
 					{sections.map((section) => (
-						<Typography key={section.label} className={toolbar('Item')}
+						<Typography key={section.label}
+						            className={toolbar('Item', { active: section.active })}
 						            variant="h6"
 						            component="div"
 						            textAlign={'center'}
