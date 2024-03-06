@@ -80,7 +80,7 @@ const BurgerMenu = ({ sections, open, onClose }) => {
 								<WhatsAppIcon height={'40px'} width={'40px'} />
 							</IconButton>
 						</Link>
-						<Link target={'_blank'} href="https://t.me/spirin_al" color="inherit">
+						<Link target={'_blank'} href="https://t.me/natalia_kovpanec" color="inherit">
 							<IconButton color="inherit">
 								<TelegramIcon height={'40px'} width={'40px'} />
 							</IconButton>
